@@ -3,9 +3,9 @@ import os
 os.chdir('D:/Data/PostgreSQL_EssT')
 
 for f in os.listdir():
-    file_name,file_ext = os.path.splitext(f)
-    file_ext = '.mp4'
-    new_name = f'{file_name}{file_ext}'
-    os.rename(f,new_name)
+    filename,filext = os.path.splitext(f)
+    file_no,fName = filename.split(' - ')
+    RepName = f'{file_no}.{fName}{filext}'
+    os.replace(f,RepName)
 
 
